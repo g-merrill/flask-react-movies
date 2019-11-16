@@ -2,6 +2,8 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
+from .commands import create_movies
+
 db = SQLAlchemy()
 
 def create_app():
@@ -13,5 +15,7 @@ def create_app():
 
   from .views import main
   app.register_blueprint(main)
+
+  app.cli.add_command(create_movies)
 
   return app
