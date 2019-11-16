@@ -15,7 +15,7 @@ def add_movie():
 
   return 'Done', 201
 
-@main.route('/movies')
+@main.route('/movies0')
 def movies():
   movie_list = Movie.query.all()
   movies = []
