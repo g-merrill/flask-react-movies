@@ -2,9 +2,9 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-from .commands import create_movies
-
 db = SQLAlchemy()
+
+from .commands import create_movies
 
 def create_app():
   app = Flask(__name__)
