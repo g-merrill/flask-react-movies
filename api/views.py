@@ -1,8 +1,12 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, render_template
 from . import db
 from .models import Movie
 
 main = Blueprint('main', __name__)
+
+@main.route('/')
+def my_index():
+  return render_template('index.html', token='Hello Flask+React')
 
 @main.route('/add_movie', methods=['POST'])
 def add_movie():
