@@ -21,6 +21,7 @@ function App() {
     >
       <MovieForm 
         onNewMovie={movie => setMovies(currentMovies => [movie, ...currentMovies])} />
+      <p>My Token = { window.token }</p>
       <Movies 
         movies={ movies }
       />
